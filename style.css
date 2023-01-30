@@ -24,6 +24,7 @@
 
 .welcome {
     width: 65%;
+    color: #ffffff;
 }
 
 .show-form i {
@@ -52,3 +53,24 @@
     min-height: 40vh;
 }
 
+
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .welcome{
+        display: flex;
+        align-items: flex-start;
+        margin: 2em;
+        padding-bottom: 3em;
+    }
+
+    .show-form i {
+        font-size: 4em;
+        border: 6px solid rgb(255, 255, 255);
+    }
+}
