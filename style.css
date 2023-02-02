@@ -75,3 +75,45 @@
         border: 6px solid rgb(255, 255, 255);
     }
 }
+
+/* task form  */
+form {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    color: rgb(234, 104, 23);
+}
+
+form header {
+    background: rgb(234, 104, 23);
+    color: #ffffff;
+    padding: 1em;
+    border-radius: .3em;
+    margin-bottom: .8em;
+}
+
+/* from input fields */
+form input {
+    padding: .8em;
+    border-radius: .3em;
+    border: .1px solid #000000;
+    outline: none;
+}
+
+/* styling the submit button */
+
+#sub-btn {
+    color: #ffffff;
+    background: rgb(234, 104, 23);
+    padding: .5em;
+    border: .4px solid #cccccc;
+    border-radius: .3em;
+}
+
+#sub-btn:hover {
+    color: #ffffff;
+    background: rgb(238, 133, 68);
+    padding: .5em;
+    border: .4px solid #cccccc;
+}
