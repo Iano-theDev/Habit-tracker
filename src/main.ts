@@ -51,10 +51,39 @@ habitDiv.addEventListener('click', () => {
     let expandCard: HTMLDivElement = document.createElement('div');
     expandCard.classList.add('expand')
     expandCard.innerHTML = habitDisplay
+
+    //create div container for expanded card buttons
+    let cardBtn: HTMLDivElement = document.createElement('div');
+
+    //create close and delete buttons
+    const closeBtn: HTMLButtonElement = document.createElement('button')
+    closeBtn.innerHTML = `<button class="close">close</button>`
+    closeBtn.classList.add('close')
+    const deleteBtn: HTMLButtonElement = document.createElement('button')
+    deleteBtn.innerText = `<button class="delete">delete</button>`
+    closeBtn.classList.add('delete')
+
+    //add buttons to container
+    cardBtn.appendChild(closeBtn)
+    cardBtn.appendChild(deleteBtn)
+
+    //add card container to expanded card
+    cardBtn.classList.add('card-btn')
+    expandCard.appendChild(cardBtn)
     displayTask.appendChild(expandCard)
 
+    closeBtn.addEventListener('click', (e) =>{
+        // expandCard.classList.remove('exapand')
+        displayTask.removeChild(expandCard)
+        console.log('clicked')
 
-    console.log(temp)
+    deleteBtn.addEventListener('click', (e) => {
+            console.log(temp.id)
+            console.log('Yeou clicked delete')
+        })
+
+
+    // console.log(temp)
 })
 
 
