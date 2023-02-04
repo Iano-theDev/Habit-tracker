@@ -217,3 +217,17 @@ form {
 .habit-form {
     transition: all 1s ease-in;
 }
+
+/* styles for expanded class */
+.expand {
+    position: absolute;
+    max-width: 150px;
+    left: 35%;
+    max-height: 150px;
+    border: 10px solid black;
+}
+
+.expand img {
+    width: 150px;
+    height: 150px; 
+}

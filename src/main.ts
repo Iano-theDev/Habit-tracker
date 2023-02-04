@@ -30,31 +30,45 @@ taskButton.addEventListener('click', (e) => {
         new Date
     )
 
+    //push object to array oject
+    habitArray.streakContainer.push(temp)
+    
+    // console.log(habitArray)
+
     let habitDisplay = `
     <img src="${temp.image}">
     <p>${temp.description}</p>
     <p>${temp.startDate}</p>
     `
+
     const habitDiv = document.createElement("div");
     habitDiv.classList.add('card');
     habitDiv.innerHTML += habitDisplay
     displayTask.appendChild(habitDiv)
 
-    //push object to array oject
-    habitArray.streakContainer.push(temp)
+// maximize / show card
+habitDiv.addEventListener('click', () => {
+    let expandCard: HTMLDivElement = document.createElement('div');
+    expandCard.classList.add('expand')
+    expandCard.innerHTML = habitDisplay
+    displayTask.appendChild(expandCard)
+
+
+    console.log(temp)
+})
+
+
+    //read from array
+    habitArray.streakContainer.forEach(element => {
+
+
+    });
 
     // clear input fields
     // descriptionValue = "";
     // imageValue = "";
     // dateValue = "";
     // console.log(habitArray)
-
-    // maximize card
-    let singleCard = document.querySelector('.card')! as HTMLDivElement
-    singleCard.addEventListener('click', () => {
-
-        console.log()
-    })
 });
 
 
